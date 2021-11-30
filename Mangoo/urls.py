@@ -14,7 +14,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-<<<<<<< HEAD
 from django.urls import path, include
 
 
@@ -22,12 +21,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('dashboard.urls')),
     path('', include('suppliers.urls')),
-=======
-from django.urls import path
-from dashboard.views import dashboard
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', dashboard, name='dashboard-page')
->>>>>>> 90fb56f4da6699a7c6e0cfa2d972624e44299b28
 ]
