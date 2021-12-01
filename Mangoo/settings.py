@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'suppliers.apps.SuppliersConfig',
     'dashboard.apps.DashboardConfig',
     'login.apps.LoginConfig',
+    'register.apps.RegisterConfig',
 
 ]
 
