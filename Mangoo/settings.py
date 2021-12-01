@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 'dashboard',
-    'suppliers',
+    'suppliers.apps.SuppliersConfig',
     'dashboard.apps.DashboardConfig',
+    'login.apps.LoginConfig',
+
 ]
 
 MIDDLEWARE = [
