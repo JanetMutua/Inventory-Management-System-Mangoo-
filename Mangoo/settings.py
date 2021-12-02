@@ -38,11 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'dashboard',
     'suppliers.apps.SuppliersConfig',
     'dashboard.apps.DashboardConfig',
     'login.apps.LoginConfig',
     'register.apps.RegisterConfig',
+
 
 ]
 
