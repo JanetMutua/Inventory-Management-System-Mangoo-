@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'dashboard.apps.DashboardConfig',
     'login.apps.LoginConfig',
     'register.apps.RegisterConfig',
+    'orders.apps.ordersConfig',
+    'ItemGroups.apps.ItemgroupsConfig',
 
 
 ]
@@ -61,7 +63,10 @@ ROOT_URLCONF = 'Mangoo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+                 # os.path.join(BASE_DIR, 'orders',
+                 # 'templates', 'orders')
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
