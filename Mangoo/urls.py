@@ -26,4 +26,5 @@ urlpatterns = [
     path('register/', include('users.urls')),
     path('orders/', include('orders.urls')),
     path('items/', include('ItemGroups.urls')),
+    path('profile/', include('users.urls'))
 ]
