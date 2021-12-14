@@ -4,12 +4,10 @@ from django.db import models
 # Create your models here.
 
 
-class ItemGroups(models.Model):
+class ItemGroup(models.Model):
     type = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
-    description = models.TextField
-    unit = models.CharField(max_length=100)
-    manufacturer = models.TextField
-    brand = models.TextField
-    attributes = models.TextField
-    tax = models.TextField
+    description = models.TextField(null=True)
+    units = models.CharField(max_length=100, null=True)
+    attributes = models.TextField(null=True)
+    tax = models.CharField(default='VAT', max_length=100, null=True)
