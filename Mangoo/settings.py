@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'orders.apps.ordersConfig',
     'ItemGroups.apps.ItemgroupsConfig',
+    'Items.apps.ItemsConfig',
 
 
 ]
