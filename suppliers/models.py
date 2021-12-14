@@ -4,11 +4,11 @@ from django.db import models
 
 
 class Supplier(models.Model):
-    first_name = models.CharField(max_length=100)
-    second_name = models.CharField(max_length=100)
-    company_name = models.CharField(max_length=100)
-    display_name = models.CharField(max_length=100)
-    supplier_email = models.EmailField
-    supplier_phone = models.IntegerField
-    website = models.CharField(max_length=100)
-    address = models.TextField
+    first_name = models.CharField(max_length=100, null=True)
+    second_name = models.CharField(max_length=100, null=True)
+    company_name = models.CharField(max_length=100, null=True)
+    display_name = models.CharField(max_length=100, null=True)
+    supplier_email = models.EmailField(null=True)
+    supplier_phone = models.CharField(max_length=100, null=True)
+    website = models.CharField(max_length=200, null=True)
+    address = models.TextField(null=True)
