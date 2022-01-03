@@ -11,3 +11,6 @@ class ItemGroup(models.Model):
     units = models.CharField(max_length=100, null=True)
     attributes = models.TextField(null=True)
     tax = models.CharField(default='VAT', max_length=100, null=True)
+
+    def __str__(self):
+        return self.name
