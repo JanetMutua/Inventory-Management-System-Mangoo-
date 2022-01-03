@@ -1,25 +1,5 @@
-{%load static%}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>RoyalUI Admin</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{%static 'dashboard/vendors/ti-icons/css/themify-icons.css'%}">
-    <link rel="stylesheet" href="{%static 'dashboard/vendors/base/vendor.bundle.base.css'%}">
-    <!-- endinject -->
-    <!-- plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="{%static 'dashboard/css/style.css'%}">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="{%static 'dashboard/images/favicon.png'%}" />
-</head>
-
-<body>
+{%extends 'users/base.html'%}
+{%block content%}
     <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
             <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
@@ -31,7 +11,7 @@
                             </div>
                             <h4>Welcome back!</h4>
                             <h6 class="font-weight-light">Happy to see you again!</h6>
-                            <form class="pt-3">
+                            <form class="pt-3" method="POST">
                                 <div class="form-group">
                                     <label for="exampleInputEmail">Username</label>
                                     <div class="input-group">
@@ -93,16 +73,4 @@
         </div>
         <!-- page-body-wrapper ends -->
     </div>
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    <script src="{%static 'dashboard/vendors/base/vendor.bundle.base.js'%}"></script>
-    <!-- endinject -->
-    <!-- inject:js -->
-    <script src="{%static 'dashboard/js/off-canvas.js'%}"></script>
-    <script src="{%static 'dashboard/js/hoverable-collapse.js'%}"></script>
-    <script src="{%static 'dashboard/js/template.js'%}"></script>
-    <script src="{%static 'dashboard/js/todolist.js'%}"></script>
-    <!-- endinject -->
-</body>
-
-</html>
+{%endblock content%}

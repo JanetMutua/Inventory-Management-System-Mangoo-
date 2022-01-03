@@ -1,11 +1,22 @@
 from django.shortcuts import render
 from django.http import request
-from django.http import HttpResponse
+from .models import Profile
+from django.contrib.auth import login, authenticate
+from django.views.generic.edit import FormView
 # Create your views here.
 
 
 def login(request):
-    return render(request, 'users/login.html')
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
+        # Redirect to a success page.
+
+    else:
+        # Return an 'invalid login' error message.
+        pass
 
 
 def register(request):
