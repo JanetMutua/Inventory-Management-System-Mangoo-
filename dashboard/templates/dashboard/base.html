@@ -54,55 +54,6 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
-                    <li class="nav-item dropdown mr-1">
-                        <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
-                            id="messageDropdown" href="#" data-toggle="dropdown">
-                            <i class="ti-email mx-0"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
-                            aria-labelledby="messageDropdown">
-                            <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
-                            <a class="dropdown-item">
-                                <div class="item-thumbnail">
-                                    <img src="{%static 'dashboard/images/faces/face4.jpg'%}" alt="image"
-                                        class="profile-pic">
-                                </div>
-                                <div class="item-content flex-grow">
-                                    <h6 class="ellipsis font-weight-normal">David Grey
-                                    </h6>
-                                    <p class="font-weight-light small-text text-muted mb-0">
-                                        The meeting is cancelled
-                                    </p>
-                                </div>
-                            </a>
-                            <a class="dropdown-item">
-                                <div class="item-thumbnail">
-                                    <img src="{%static 'dashboard/images/faces/face2.jpg'%}" alt="image"
-                                        class="profile-pic">
-                                </div>
-                                <div class="item-content flex-grow">
-                                    <h6 class="ellipsis font-weight-normal">Tim Cook
-                                    </h6>
-                                    <p class="font-weight-light small-text text-muted mb-0">
-                                        New product launch
-                                    </p>
-                                </div>
-                            </a>
-                            <a class="dropdown-item">
-                                <div class="item-thumbnail">
-                                    <img src="{%static 'dashboard/images/faces/face3.jpg'%}" alt="image"
-                                        class="profile-pic">
-                                </div>
-                                <div class="item-content flex-grow">
-                                    <h6 class="ellipsis font-weight-normal"> Johnson
-                                    </h6>
-                                    <p class="font-weight-light small-text text-muted mb-0">
-                                        Upcoming board meeting
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
                             data-toggle="dropdown">
@@ -182,7 +133,7 @@
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="{% url 'dashboard-home'%}">
                             <i class="ti-shield menu-icon"></i>
                             <span class="menu-title">Dashboard</span>
                         </a>
@@ -191,20 +142,20 @@
                         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
                             aria-controls="ui-basic">
                             <i class="ti-palette menu-icon"></i>
-                            <span class="menu-title">Item Groups</span>
+                            <span class="menu-title">Stock</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link"
-                                        href="pages/ui-features/buttons.html">Items</a></li>
+                                        href="{% url 'items-page' %}">Items</a></li>
                                 <li class="nav-item"> <a class="nav-link"
-                                        href="pages/ui-features/typography.html">Item groups</a></li>
+                                        href="{% url 'itemgroup-page'%}">Item groups</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/forms/basic_elements.html">
+                        <a class="nav-link" href="{% url 'order-page' %}">
                             <i class="ti-layout-list-post menu-icon"></i>
                             <span class="menu-title">Orders</span>
                         </a>
@@ -216,7 +167,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/tables/basic-table.html">
+                        <a class="nav-link" href="{% url 'supplier-page' %}">
                             <i class="ti-view-list-alt menu-icon"></i>
                             <span class="menu-title">Suppliers</span>
                         </a>
@@ -229,14 +180,10 @@
                         </a>
                         <div class="collapse" id="auth">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a>
+                                <li class="nav-item"> <a class="nav-link" href="#"> Login </a>
                                 </li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/samples/login-2.html"> Login 2
-                                    </a></li>
                                 <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register
                                     </a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/samples/register-2.html"> Register
-                                        2 </a></li>
                                 <li class="nav-item"> <a class="nav-link" href="pages/samples/lock-screen.html">
                                         Lockscreen </a></li>
                             </ul>
@@ -245,14 +192,16 @@
                 </ul>
             </nav>
             <!-- partial -->
+            <!-- ---------------body section---------------------- -->
+            {%block content%}{%endblock content%}
             
-            <div>  
+            
+                <div>  
                 <!-- content-wrapper ends -->
                 <!-- partial:partials/_footer.html -->
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
-                            Mangoo 2020</span>
+                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©Mangoo 2020</span>
                     </div>
                 </footer>
                 <!-- partial -->
