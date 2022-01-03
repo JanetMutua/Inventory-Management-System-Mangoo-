@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'orders.apps.ordersConfig',
     'ItemGroups.apps.ItemgroupsConfig',
     'Items.apps.ItemsConfig',
+    'reports.apps.ReportsConfig',
 
 
 ]
