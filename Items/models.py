@@ -18,3 +18,6 @@ class Item(models.Model):
 
     def unit_type():
         return 'Kg', 'Dozen', 'Pieces', 'Pairs'
+
+    def __str__(self):
+        return self.item_name
