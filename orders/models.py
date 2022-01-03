@@ -19,3 +19,6 @@ class order(models.Model):
     item_name = models.CharField(max_length=100, null=True)
     item_quantity = models.CharField(max_length=100, null=True)
     item_attribute = models.TextField(null=True)
+
+    def __str__(self):
+        return self.item_name

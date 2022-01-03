@@ -1,1 +1,8 @@
 {%extends 'dashboard/base.html'%}
+{% block content%}
+    {%for order in orders%}
+    <p>Item group:{{order.item_group}}</p>
+    <p>Item name:{{order.item_name}}</p>
+    <p>Item quantity:{{order.item_quantity}}</p>
+    {%endfor%}
+{%endblock content%}
