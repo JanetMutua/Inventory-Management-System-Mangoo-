@@ -1,1 +1,10 @@
 {%extends 'dashboard/base.html'%}
+
+{%block content%}
+    {%for supplier in suppliers%}
+    <h2>{{supplier.display_name}}</h2>
+    <p>{{supplier.supplier_phone}}</p>
+    <p>{{supplier.supplier_email}}</p>
+    {%endfor%}
+
+{%endblock content%}

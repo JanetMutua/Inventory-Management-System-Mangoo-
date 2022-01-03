@@ -12,3 +12,9 @@ class Supplier(models.Model):
     supplier_phone = models.CharField(max_length=100, null=True)
     website = models.CharField(max_length=200, null=True)
     address = models.TextField(null=True)
+
+    class Meta():
+        ordering = ['-first_name']
+
+    def __str__(self):
+        return self.name
