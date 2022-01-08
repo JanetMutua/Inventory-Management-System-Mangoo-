@@ -16,7 +16,7 @@ def login(request):
 
     else:
         # Return an 'invalid login' error message.
-        pass
+        return 'Valid login credentials'
 
 
 def register(request):
